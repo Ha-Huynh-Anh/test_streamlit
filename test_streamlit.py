@@ -61,5 +61,5 @@ train_df = get_train_df('https://raw.githubusercontent.com/Ha-Huynh-Anh/Timbenhv
 sym_input_vie = st.multiselect('Các triệu chứng của bạn', sym_df.viet.values)
 sym_input_eng = trans_sym(sym_input_vie)
 input_array = np.array([sym_to_vector(sym_input_eng)])
-st.write(get_train_df(train_df,input_array))
+st.write(get_disease(train_df,input_array))
 
