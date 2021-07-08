@@ -55,7 +55,7 @@ def get_disease(train_df, input_array):
 url_train_df = 'https://raw.githubusercontent.com/Ha-Huynh-Anh/Timbenhvien_test/main/data/train_df.csv'
 url_sym_df = 'https://raw.githubusercontent.com/Ha-Huynh-Anh/Timbenhvien_test/main/data/sym_df.csv'
 sym_df = get_sym_df(url_sym_df)
-train_df = get_train_df(url_train_df)
+train_df = get_train_df('https://raw.githubusercontent.com/Ha-Huynh-Anh/Timbenhvien_test/main/data/train_df.csv')
 
 
 sym_input_vie = st.multiselect('Các triệu chứng của bạn', sym_df.viet.values)
