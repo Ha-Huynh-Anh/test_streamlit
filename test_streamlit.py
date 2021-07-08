@@ -59,7 +59,7 @@ train_df = get_train_df(url_train_df)
 
 
 sym_input_vie = st.multiselect('Các triệu chứng của bạn', sym_df.viet.values)
-st.write(sym_input_vie)
-st.write(trans_sym(sym_input_vie))
-st.write(sym_to_vector(trans_sym(sym_input_vie)))
-st.write(train_df)
+sym_input_eng = trans_sym(sym_input_vie)
+input_array = np.array([sym_to_vector(sym_input_eng)])
+st.write(get_train_df(train_df,input_array))
+
