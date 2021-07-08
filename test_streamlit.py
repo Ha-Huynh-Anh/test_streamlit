@@ -2,6 +2,10 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
+
+st.set_page_config(layout = 'wide')
+test_secrets = st.secrets['test']
+st.write(test_secrets)
 @st.cache
 def get_sym_df(url1):
   sym_df = pd.read_csv(url1)
